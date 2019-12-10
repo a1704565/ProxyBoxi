@@ -95,6 +95,8 @@ Firmware
 
 # Squid Proxy #
 
+Otimme käyttöön Squidin proxy:n (Squid 4.6) ProxyBoxi:ssa, sillä havaitsimme, että loppukäyttäjän tietoturvan kannalta on oleellista käyttää ACL-sääntöjä. Tämä päätös tehtiin mahdollisen verkkokäytön profiloinnin estämiseksi. Squid:n proxy toimii tässä tapauksessa cache-proxyna (transparent proxy), jolla on oma cache-kansio microSD-kortilla. 
+
 ```
 acl localnet src 10.0.0.0/8 
 acl localnet src 172.16.0.0/12 
