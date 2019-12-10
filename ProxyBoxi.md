@@ -318,16 +318,32 @@ Esimerkiksi Squid tarvitsi port forward säännön, joka sallii liikenteen. Kuva
 
 
 
+Seuraava kuva näyttää näkymän, kun painat "edit" painiketta. Täältä pääset muokkaamaan tarkasti port forward- sääntöä.
+
+
 
 ![Firewall - säännön asettaminen LuCI:sta](pic02.PNG)
 
+
+Seuraavassa kuvassa näkyy LuCI:n palomuurin hallinta osio, jossa on palomuuri alueet ja säätömahdollisuudet näkyvissä (nämä oli ne säädöt, mitä kannattaa käyttää):
+
+
+
 ![Firewall - Firewall zone](pic04.PNG)
+
+
+
+
+
+Seuraavassa kuvassa on otos /etc/config/firewall tiedostosta. Palomuurin säätäminen on mahdollista myös täältä käsin:
+
+
 
 ![Firewall - Säädökset CLI:stä nähtynä](pic05.PNG)
 
 
 
-
+Lähde: https://openwrt.org/docs/guide-user/firewall/firewall_configuration
 
 
 
