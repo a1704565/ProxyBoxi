@@ -301,12 +301,22 @@ Lähde: https://www.ovpn.com/en/guides/openwrt
 
 Palomuuri on tietoturvan kannalta yksi tärkeimmistä työkaluista, joka on OpenWrt:ssä alustavasti päällä ja sisältää vakiona toiminnan kannalta kohtalaisen turvalliset asetukset. OpenWrt:n palomuuri käyttää hallintaan firewall3:sta (fw3) ja säädökset toimivat IP-tables:n pohjalta. Palomuuria pystyy hallitsemaan /etc/config/firewall tai LuCI:sta palomuuriosiosta. LuCI:sta pystyy myös hahmottamaan hyvin palomuuri alueet, kuten LAN- ja WAN-alueet. Näitä pystyy myös säätämään samasta paikasta tai CLI-pohjaisesti paikasta /etc/config/firewall.
 
+Jotta ProxyBoxi:lla olisi perustoiminnallisuus, pitää olla seuraavanlaiset Säädökset:
+
+![Firewall - Liikenne Sääntöjä](pic03.PNG)
+
+
+Esimerkiksi Squid tarvitsi port forward säännön, joka sallii liikenteen 
 
 ![Firewall - Port Forwards](pic01.PNG)
 
 
 
+![Firewall - säännön asettaminen LuCI:sta](pic02.PNG)
 
+![Firewall - Firewall zone](pic04.PNG)
+
+![Firewall - Säädökset CLI:stä nähtynä](pic05.PNG)
 
 
 
