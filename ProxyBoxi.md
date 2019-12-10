@@ -253,7 +253,7 @@ Lähde: https://openwrt.org/docs/guide-user/services/proxy/proxy.squid
 # OpenVPN Client #
 
 Tietoturvan lisäämiseksi on hyvä lisätä OpenVPN Client ratkaisu ProxyBoxiin, jolloin OpenWrt toimisi VPN-clienttina ja kaikki liikenne kulkisi salatun VPN-tunnelin lävitse. Tällöin mahdollinen hakkeri ei pääsisi tutkimaan tietoliikennettä yhtä helposti. 
-HUOM!!! TÄMÄ RATKAISU EI TOIMI!
+HUOM!!! TÄMÄ RATKAISU EI TOIMI! OpenVPN ei toiminut nykyisellä asennusmetodilla ProxiBoxi:n kanssa ohjelmisto bugin ja kommunikaation palomuurin kanssa.
 
 Asennetaan OpenVPN ohjelmistot:
 
@@ -292,7 +292,7 @@ sed -i -e "/^user/s/^/#/\$a user nobody/^group/s/^/#/\$a group nogroup/^dev/s/^/
 /etc/init.d/openvpn restart 
 ```
 
-OpenVPN ei toimi kyseisellä OpenWrt 
+Nyt pitäisi olla openvpn asennettuna openvpn-client.
 
 Lähde: https://www.ovpn.com/en/guides/openwrt
 
