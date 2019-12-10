@@ -261,7 +261,40 @@ Asennetaan OpenVPN ohjelmistot:
 opkg install luci-app-openvpn openvpn-easy-rsa openvpn-openssl
 ```
 
+Nyt asetetaan palomuuri vielä sallimaan liikenne palomuuri-alueiden lävitse tunneloimalla liikenne:
 
+```
+uci rename firewall.@zone[0]="lan" 
+
+uci rename firewall.@zone[1]="wan" 
+
+uci rename firewall.@forwarding[0]="lan_wan" 
+
+uci del_list firewall.wan.device="tun0" 
+
+uci add_list firewall.wan.device="tun0" 
+
+uci commit firewall/etc/init.d/firewall restart 
+```
+
+Tämän jälkeen asetukset /etc/openvpn/client.conf:n
+
+```
+umask u=rw,g=,o=cat << "EOF" > /etc/openvpn/client.conf  Vpn_client_konfiguraatio_asetukset EOF  
+```
+HUOM! muista asettaa VPN-client konfiguraatio asetukset "Vpn_client_konfiguraatio_asetukset" kohtaan.
+
+Lopuksi piti vielä konfiguroida VPN-client komennolla:
+
+```
+sed -i -e "/^user/s/^/#/\$a user nobody/^group/s/^/#/\$a group nogroup/^dev/s/^/#/\$a dev $(uci get firewall.wan.device | sed -e "s/^.*\s//")" /etc/openvpn/client.conf 
+
+/etc/init.d/openvpn restart 
+```
+
+OpenVPN ei toimi kyseisellä OpenWrt 
+
+Lähde: https://www.ovpn.com/en/guides/openwrt
 
 Selite:
 - adasdasdas
