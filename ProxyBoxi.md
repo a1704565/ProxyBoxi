@@ -116,7 +116,7 @@ Tämän jälkeen säädetään palomuuria CLI-pohjaisesti:
 nano /etc/config/firewall
 ```
 
-Tänne laitetaan säännös sallimaan liikenne portista 3128
+Tänne laitetaan säännös sallimaan liikenne lähtöportista 80/tcp kohdeporttiin 3128.
 
 ```
 config redirect 
@@ -240,7 +240,14 @@ Tämän jälkeen käynnistetään OpenWrt uudelleen:
 ```
 reboot
 ```
-Nyt pitäisi olla 
+Nyt pitäisi olla proxy käytössä ja tämän voit kokeilla proxy:ä käytännössä laittamalla seuraavat asetuksen esimerkiksi selaimeen:
+
+```
+http proxy IP: 192.168.1.1
+Portti: 3128
+```
+
+
 
 
 Selite:
