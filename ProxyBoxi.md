@@ -144,7 +144,13 @@ config redirect
             option dest_port '3128' 
 ```
 
+Seuraavaksi pitää säätää squid.conf:ia.
 
+```
+nano /etc/squid/squid.conf
+```
+
+Tänne laitetaan seuraavat asetukset:
 
 ```
 acl localnet src 10.0.0.0/8 
@@ -196,6 +202,17 @@ cache_mem 8 MB
 maximum_object_size_in_memory 100 KB 
 maximum_object_size 32 MB 
 ```
+Squid:n asetusten säätämisen jälkeen pitää tehdä komennot:
+
+```
+Squid –k reconfigure #uudelleen konfiguroi squid:n 
+
+Squid –z #rakentaa tiedosto puun uudelleen squid:lle
+
+squid #käynnistää squidin uudelleen
+```
+
+
 
 Selite:
 - adasdasdas
