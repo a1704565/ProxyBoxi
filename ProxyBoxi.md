@@ -211,12 +211,55 @@ Squid –z #rakentaa tiedosto puun uudelleen squid:lle
 
 squid #käynnistää squidin uudelleen
 ```
+Seuraavaksi täytyy muuttaa /etc/sysupgrade.conf tiedostoa, jotta asetukset Squid:n cache:lle säilyvät. Seuraavat rivit on lisättävä aiemmin mainittuun tiedostoon: 
 
+```
+nano /etc/squid/squid.conf 
+```
+
+Tämän jälkeen cache proxyn asennus pitäisi olla suoritettu onnistuneesti. Vielä pitää kuitenkin tehdä tiedosto, josta Squid hakee estettävät sivustot. Tämä tiedosto luodaan komennolla: 
+
+```
+nano /etc/squid/Ads.conf  
+```
+
+Ads.conf:n laitetaan esimerkiksi seuraavat:
+
+```
+Mainos.fi 
+Testisivu.net 
+123.123.123.123 
+```
+Tämän jälkeen annetaan Ads.conf:lle vielä oikeudet:
+
+```
+chmod 755 Ads.conf
+```
+Tämän jälkeen käynnistetään OpenWrt uudelleen:
+
+```
+reboot
+```
+Nyt pitäisi olla 
 
 
 Selite:
 - adasdasdas
 - dsadsadas
 - grghrdhdh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
