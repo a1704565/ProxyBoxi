@@ -95,7 +95,56 @@ Firmware
 
 # Squid Proxy #
 
-Otimme käyttöön Squidin proxy:n (Squid 4.6) ProxyBoxi:ssa, sillä havaitsimme, että loppukäyttäjän tietoturvan kannalta on oleellista käyttää ACL-sääntöjä. Tämä päätös tehtiin mahdollisen verkkokäytön profiloinnin estämiseksi. Squid:n proxy toimii tässä tapauksessa cache-proxyna (transparent proxy), jolla on oma cache-kansio microSD-kortilla. 
+Ottamalla käyttöön Squidin proxy:n (Squid 4.6) ProxyBoxi:ssa on loppukäyttäjän tietoturvan kannalta oleellista käyttää ACL-sääntöjä. Tämä vaihtoehto otetaan käyttöön mahdollisen verkkokäytön profiloinnin estämiseksi. Squid:n proxy toimii tässä tapauksessa cache-proxyna (transparent proxy), jolla on oma cache-kansio microSD-kortilla. 
+
+Asennus:
+
+Asennetaan Squid proxy komennolla:
+
+```
+opkg install squid
+```
+Proxy-ohjelmiston asentamisen jälkeen asennetaan vielä cache manageri ja LuCI hallinta moduuli squidille:
+
+```
+opkg install luci-app-squid squid-mod-cachemgr
+```
+
+Tämän jälkeen säädetään palomuuria CLI-pohjaisesti:
+
+```
+nano /etc/config/firewall
+```
+
+Tänne laitetaan säännös sallimaan liikenne portista 3128
+
+```
+config redirect 
+
+            option name 'Allow-transparent-Squid' 
+
+            option enabled '1' 
+
+            option proto 'tcp' 
+
+            option target 'DNAT' 
+
+            option src 'lan' 
+
+            option src_ip '!192.168.1.1' 
+
+            option src_dip '!192.168.1.1' 
+
+            option src_dport '80' 
+
+            option dest 'lan' 
+
+            option dest_ip '192.168.1.1' 
+
+            option dest_port '3128' 
+```
+
+
 
 ```
 acl localnet src 10.0.0.0/8 
