@@ -247,6 +247,19 @@ http proxy IP: 192.168.1.1
 Portti: 3128
 ```
 
+Lähde: https://openwrt.org/docs/guide-user/services/proxy/proxy.squid
+
+
+# OpenVPN Client #
+
+Tietoturvan lisäämiseksi on hyvä lisätä OpenVPN Client ratkaisu ProxyBoxiin, jolloin OpenWrt toimisi VPN-clienttina ja kaikki liikenne kulkisi salatun VPN-tunnelin lävitse. Tällöin mahdollinen hakkeri ei pääsisi tutkimaan tietoliikennettä yhtä helposti. 
+HUOM!!! TÄMÄ RATKAISU EI TOIMI!
+
+Asennetaan OpenVPN ohjelmistot:
+
+```
+opkg install luci-app-openvpn openvpn-easy-rsa openvpn-openssl
+```
 
 
 
