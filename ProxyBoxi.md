@@ -6,24 +6,24 @@
 
 ##  Tärkeää tietää aiheesta  ##
 
-OpenWRT = OPEN Wireless RouTer
+Tässä ohjeessa käytetään pohjana OpenWrt 19.07.0-rc2 -versiota, joka julkaistiin sunnuntaina 1.12.2019. Ohjeists
 
-Käyttöjärjestelmän dokumnetaatio on julkaistu seuraavassa osoitteessa:
-https://openwrt.org/docs/start
+OpenWrt -käyttöjärjestelmän dokumnetaatio on saatavilla seuraavasta linkistä:
+[OpenWrt.org dokumentaatio](https://openwrt.org/docs/start)
 
+Edellä mainitut ohjeet ovat tällä hetkellä hyvin suntaa antavia tietyissä tapauksissa sillä **Raspberry Pi 3b +** kehitysalustan toiminnallisuus poikkeaa perinteisestä reitittimestä.
 
-Edellä mainitut ohjeet ovat tällä hetkellä hyvin suntaa antavia tietyissä tapauksissa sillä **Raspberry Pi 3b +** kehitysalustan toiminnallisuus poikkeaa perinteisestä reitittimestä, joihin OpenWRT on perinteisesti tarkoitettu asennettavaksi.
-
-https://en.wikipedia.org/wiki/OpenWrt
-LEDE
+[OpenWrt](https://openwrt.org/about)- ja [LEDE](https://openwrt.org/about) -projektit yhdistyivät Tammikuussa 2018 ja sen takia aikaisemmin linkatussa ohjeistuksessa voi esiintyä molempien projektien termistöä. On kuitenkin hyvä tietää, että ohjeita päivitetään jatkuvasti lisää.
 
 
-
-Lede/OpenWRT yhdistyneet
-Lähde: https://www.theregister.co.uk/2017/05/10/openwrt_and_lede_peace_plan/
+OpenWrt käyttää komentorivillä `ash shell` syntaksia.
 
 
-OpenWrt is configured using a command-line interface (ash shell)
+**Sanastoa**
+
+* OpenWrt = OPEN Wireless RouTer 
+* LEDE = Linux Embedded Development Environment
+* LuCI = Lua Configuration Interface
 
 ----------
 
