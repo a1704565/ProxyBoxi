@@ -349,4 +349,10 @@ Lähde: https://openwrt.org/docs/guide-user/firewall/firewall_configuration
 
 # Johtopäätökset #
 
+OpenWrt ei sovi nykyisessä olomuodossaan käyttötarkoitukseen, koska se on liian epävakaa alustana. Toiminnallisuudet eivät toimi ohjeistuksen mukaisesti Raspberryllä, vaan kaikki ohjeet ovat enemmänkin suuntaa antavia ja puutteellisia. Ohjeet OpenWrt:n on moninaisista syistä hankala seurata, sillä ohjeet ja ohjelmat sekä tiedostojen rakenne muuttuvat uusien OpenWrt:n versioiden myötä jatkuvasti.  
 
+Loppupeleissä saimme yllättävän tuloksen, sillä Ethernet-kaapelilla yhteys loppukäyttäjälle on yli 90 Mbps kumpaankin suuntaan ja käytettävyys loppukäyttäjän kannalta parani, jos käytössä on laite, johon kytkeytyy RJ-45 liitännällä kaapeli. 
+
+Squidin Proxy saatiin toimimaan kohtalaisesti ProxyBoxi:ssa eli sääntöjen luominen sekä perustoiminnallisuus saatiin toimimaan laitteessa muiden ohjelmistojen rinnalla. Annamme kuitenkin loppukäyttäjälle avaimet säätää laitetta mieleisekseen. 
+
+OpenVPN tämän projektin rajoissa on äärimmäisen epävakaa, sillä toimivuus on havaittu lähes käyttökelvottomaksi, Tämä edeltävä saattaa muuttua uuden OpenWrt:n stabiilin versiojulkaisun myötä. Esimerkiksi 19.07.0 rc2 versiossa kokeiltuamme havaitsimme, että edes uusin julkaisu versio ei toimi OpenVPN:n kanssa halutulla tavalla ja yhteyttä salattuun VPN-tunneliin ei saada luotua. 
