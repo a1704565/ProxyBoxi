@@ -27,3 +27,8 @@ Laitetta voidaan siis käyttää myös tilanteessa, jossa mahdollinen kolmas osa
 Ratkaisun ja loppukäyttäjän välinen tapahtumavirta prosessina:
 
 ![Prosessikaavio](pic07.PNG)
+
+
+Linkki ProxyBoxin varsinaiseen ohjeistukseen:
+
+[ProxyBoxin käyttöönotto ja asennus](ProxyBoxi.md)
