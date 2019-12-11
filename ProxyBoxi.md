@@ -6,24 +6,24 @@
 
 ##  Tärkeää tietää aiheesta  ##
 
-Tässä ohjeessa käytetään pohjana OpenWrt 19.07.0-rc2 -versiota, joka julkaistiin sunnuntaina 1.12.2019. Ohjeists
+OpenWRT = OPEN Wireless RouTer
 
-OpenWrt -käyttöjärjestelmän dokumnetaatio on saatavilla seuraavasta linkistä:
-[OpenWrt.org dokumentaatio](https://openwrt.org/docs/start)
-
-Edellä mainitut ohjeet ovat tällä hetkellä hyvin suntaa antavia tietyissä tapauksissa sillä **Raspberry Pi 3b +** kehitysalustan toiminnallisuus poikkeaa perinteisestä reitittimestä.
-
-[OpenWrt](https://openwrt.org/about)- ja [LEDE](https://openwrt.org/about) -projektit yhdistyivät Tammikuussa 2018 ja sen takia aikaisemmin linkatussa ohjeistuksessa voi esiintyä molempien projektien termistöä. On kuitenkin hyvä tietää, että ohjeita päivitetään jatkuvasti lisää.
+Käyttöjärjestelmän dokumnetaatio on julkaistu seuraavassa osoitteessa:
+https://openwrt.org/docs/start
 
 
-OpenWrt käyttää komentorivillä `ash shell` syntaksia.
+Edellä mainitut ohjeet ovat tällä hetkellä hyvin suntaa antavia tietyissä tapauksissa sillä **Raspberry Pi 3b +** kehitysalustan toiminnallisuus poikkeaa perinteisestä reitittimestä, joihin OpenWRT on perinteisesti tarkoitettu asennettavaksi.
+
+https://en.wikipedia.org/wiki/OpenWrt
+LEDE
 
 
-**Sanastoa**
 
-* OpenWrt = OPEN Wireless RouTer 
-* LEDE = Linux Embedded Development Environment
-* LuCI = Lua Configuration Interface
+Lede/OpenWRT yhdistyneet
+Lähde: https://www.theregister.co.uk/2017/05/10/openwrt_and_lede_peace_plan/
+
+
+OpenWrt is configured using a command-line interface (ash shell)
 
 ----------
 
@@ -310,7 +310,7 @@ Jotta ProxyBoxi:lla olisi perustoiminnallisuus, pitää olla seuraavanlaiset Sä
 
 
 
-Esimerkiksi Squid tarvitsi port forward säännön, joka sallii liikenteen. Kuva on otettu LuCI:n palomuurin hallinta näkymästä (Pitäisi olla asennuksen yhteydessä valmiiksi määriteltyinä.):
+Esimerkiksi Squid tarvitsi port forward säännön, joka sallii liikenteen. Kuva on otettu LuCI:n palomuurin hallinta näkymästä (Pitäisi olla asennuksen yhteydessä jo valmiiksi määriteltyinä kuvanmukaisesti.):
 
 
 
