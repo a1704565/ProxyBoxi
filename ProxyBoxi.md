@@ -1,4 +1,4 @@
-# OpenWrt #
+# ProxyBoxin käyttöönottoprosessi #
 
 
 ----------
@@ -42,7 +42,7 @@ Ratkaisun käyttöönottoa ennen tarvitsee suorittaa esivalmisteluita ja hankkia
 - Ohjelmisto on nyt valmis ensimmäiseen käyttnistykseen.
 - Muista liittää ennen käynnistystä Raspberry Pi:hin **USB-näppäimistö** ja yhteensopiva **WLAN-tikku**. Yhteensopivuus on hankala määrittää etukäteen ja jouduimme itsetestaamaan usean laitteen ennen sopivan löytymistä, mutta nyrkkisääntönä 5GHz tikut eivät usein toimi tai ylikuumenevat firmware ongelmien takia. Parhaat tulokset saimme WLAN-tikuilla jotka käyttävät RealTek:n **RTL8188CUS** piirisarjaa tai jotain sen variantteja. 
 
-## Käyttöönotto ##
+## OpenWrt:n käyttöönotto ##
 
 Kun laite käynnistetään ensimmäisen kerran, on syytä jättää ethernet johto irti, koska kaikissa OpenWRT versioissa `dhcp` tai esimääritetty staattinen IP ei toimi oikein, ellei seuraavaa kodia syötetä ensin komentoriville.
 
